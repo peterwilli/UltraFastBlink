@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 import math
 
+VERSION = '1.0'
+
 FITS_SUFFIXES = {'.fits', '.fit', '.fts'}
 IMAGE_SUFFIXES = FITS_SUFFIXES | {'.xisf'}
 DEFAULT_CUTOFF = 10.0

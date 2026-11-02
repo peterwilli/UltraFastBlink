@@ -1,6 +1,7 @@
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QLabel, QHBoxLayout, QMessageBox
 from ._window import UltraFastBlinkComparator
+from ._models import VERSION
 
 def run(ctx):
     """Open a parent-owned tool window without blocking SASpro's event loop."""
@@ -11,7 +12,7 @@ def run(ctx):
     window = UltraFastBlinkComparator(doc_manager=doc_manager, parent=app)
     window.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)
     window.setWindowFlags(Qt.WindowType.Window)
-    credit = QLabel('Made with love by <a href="https://emerald.show">Emerald</a>', window)
+    credit = QLabel(f'v{VERSION} | Made with love by <a href="https://emerald.show">Emerald</a>', window)
     credit.setOpenExternalLinks(True)
     credit.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
     layout = window.layout()

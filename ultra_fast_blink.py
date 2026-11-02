@@ -33,4 +33,5 @@ except Exception:
 
 
 def run(ctx):
+    ctx.log(f"[Ultra Fast Blink] Entry: {Path(__file__).resolve()}; helpers: {_package_dir}")
     return _run(ctx)
